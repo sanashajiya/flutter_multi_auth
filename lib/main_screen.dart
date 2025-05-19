@@ -1,5 +1,6 @@
 import 'package:auth_project/email_authentication/login_page.dart';
 import 'package:auth_project/email_authentication/signup_page.dart';
+import 'package:auth_project/phone_authentication/phone_auth_screen.dart';
 import 'package:flutter/material.dart';
 
 class MainScreen extends StatelessWidget {
@@ -26,7 +27,10 @@ class MainScreen extends StatelessWidget {
             ));
             }),
             _buildSignInButton("Phone Sign In", () {
-              // TODO: Implement phone sign in
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => const PhoneAuthScreen()),
+              );
             }),
             _buildSignInButton("Google Sign In", () {
               // TODO: Implement Google sign in
