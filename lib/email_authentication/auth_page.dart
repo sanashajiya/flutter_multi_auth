@@ -1,6 +1,6 @@
 
-import 'package:auth_project/Authentication/login_page.dart';
-import 'package:auth_project/Authentication/signup_page.dart';
+import 'package:auth_project/email_authentication/login_page.dart';
+import 'package:auth_project/email_authentication/signup_page.dart';
 import 'package:flutter/material.dart';
 
 class AuthPage extends StatefulWidget {

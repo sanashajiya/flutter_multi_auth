@@ -1,5 +1,5 @@
 // import 'package:auth_project/pages/forgot_password_page.dart';
-import 'package:auth_project/Authentication/reset_password_page.dart';
+import 'package:auth_project/email_authentication/reset_password_page.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
