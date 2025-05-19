@@ -1,13 +1,10 @@
+import 'package:auth_project/Authentication/login_page.dart';
+import 'package:auth_project/Authentication/signup_page.dart';
 import 'package:flutter/material.dart';
 
-class MainScreen extends StatefulWidget {
+class MainScreen extends StatelessWidget {
   const MainScreen({super.key});
 
-  @override
-  State<MainScreen> createState() => _MainScreenState();
-}
-
-class _MainScreenState extends State<MainScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -15,22 +12,30 @@ class _MainScreenState extends State<MainScreen> {
         child: Column(
           children: [
             _buildSignInButton("Email/Password Sign Up", () {
-              // Handle Email/Password Sign Up
+               Navigator.of(context).push(MaterialPageRoute(
+              builder: (context) => SignupPage(
+                onClickedSignIn: () => Navigator.of(context).pop(),
+              ),
+            ));
             }),
             _buildSignInButton("Email/Password Login", () {
-              // Handle Email/Password Login
+              Navigator.of(context).push(MaterialPageRoute(
+              builder: (context) => LoginPage(
+                onClickedSignUp: () => Navigator.of(context).pop(),
+              ),
+            ));
             }),
             _buildSignInButton("Phone Sign In", () {
-              // Handle Phone Sign In
+              // TODO: Implement phone sign in
             }),
             _buildSignInButton("Google Sign In", () {
-              // Handle Google Sign In
+              // TODO: Implement Google sign in
             }),
             _buildSignInButton("Facebook Sign In", () {
-              // Handle Facebook Sign In
+              // TODO: Implement Facebook sign in
             }),
             _buildSignInButton("Anonymous Sign In", () {
-              // Handle Anonymous Sign In
+              // TODO: Implement anonymous sign in
             }),
           ],
         ),
