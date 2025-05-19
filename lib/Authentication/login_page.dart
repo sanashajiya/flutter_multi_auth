@@ -1,4 +1,5 @@
 // import 'package:auth_project/pages/forgot_password_page.dart';
+import 'package:auth_project/Authentication/reset_password_page.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
@@ -31,6 +32,9 @@ class _LoginWidgetState extends State<LoginPage> {
         email: emailController.text.trim(),
         password: passwordController.text.trim(),
       );
+      if (context.mounted) {
+        Navigator.of(context).pop();
+      }
     } on FirebaseAuthException catch (e) {
       ScaffoldMessenger.of(context).showSnackBar(
         SnackBar(content: Text(e.message ?? 'Sign in failed')),
@@ -91,10 +95,11 @@ class _LoginWidgetState extends State<LoginPage> {
                 child: GestureDetector(
                   child: const Text("Forgot Password?", style: TextStyle(color: Colors.deepPurple)),
                   onTap: (){
-                  //   Navigator.of(context).push(MaterialPageRoute(
-                  //   builder: (context) => ForgotPasswordPage(),
+                    Navigator.of(context).push(MaterialPageRoute(
+                    builder: (context) => ResetPasswordPage(),
                  
-                  // )),
+                  ),
+                  );
                   },
                   
                   
