@@ -1,4 +1,5 @@
 // import 'package:firebase_auth/firebase_auth.dart';
+import 'package:auth_project/main_screen.dart';
 import 'package:flutter/material.dart';
 // import 'firebase_options.dart'; // Uncomment if using FlutterFire CLI
 
@@ -19,9 +20,10 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Firebase Auth',
       debugShowCheckedModeBanner: false,
-      home: Scaffold(
-        body: Text("Firebase Auth"),
+      theme: ThemeData(
+        primarySwatch: Colors.blue,
       ),
+      home: MainScreen(),
     );
   }
 }
